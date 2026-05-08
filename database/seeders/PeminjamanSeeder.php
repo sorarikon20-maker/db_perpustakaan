@@ -1,0 +1,72 @@
+<?php
+
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class PeminjamanSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        DB::table('peminjamans')->insert([
+            [
+                'siswa_id' => 1,
+                'buku_id' => 1,
+                'user_id' => 1,
+                'tanggal_pinjam' => '2026-02-01',
+                'tanggal_kembali' => '2026-02-10',
+                'status' => 'dikembalikan',
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ],
+            [
+                'siswa_id' => 2,
+                'buku_id' => 2,
+                'user_id' => 2,
+                'tanggal_pinjam' => '2026-02-02',
+                'tanggal_kembali' => null,
+                'status' => 'dipinjam',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+
+                'siswa_id' => 3,
+                'buku_id' => 3,
+                'user_id' => 1,
+                'tanggal_pinjam' => '2026-02-03',
+                'tanggal_kembali' => '2026-02-12',
+                'status' => 'dikembalikan',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'siswa_id' => 4,
+                'buku_id' => 4,
+                'user_id' => 2,
+                'tanggal_pinjam' => '2026-02-04',
+                'tanggal_kembali' => null,
+                'status' => 'dipinjam',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'siswa_id' => 5,
+                'buku_id' => 5,
+                'user_id' => 1,
+                'tanggal_pinjam' => '2026-02-05',
+                'tanggal_kembali' => '2026-02-15',
+                'status' => 'dikembalikan',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+    }
+}
